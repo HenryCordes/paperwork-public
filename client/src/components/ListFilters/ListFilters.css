@@ -1,0 +1,141 @@
+.filter-container {
+  display: flex;
+  align-items: self-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.filter-item {
+  position: relative;
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  min-width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #666;
+  position: relative;
+}
+
+.filter-button.active {
+  background-color: #f8f9fa;
+  border-color: #3c8dbc;
+  color: #3c8dbc;
+}
+
+.filter-button:hover {
+  background-color: #f8f9fa;
+}
+
+.filter-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #3c8dbc;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.period-popup,
+.custom-date-picker-popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  width: 200px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.custom-date-picker-popup {
+  width: 340px;
+}
+
+.date-picker-group label {
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.date-range-container .react-datepicker-wrapper {
+  width: 100%;
+}
+
+.date-range-container .btn-default {
+  margin-right: 8px;
+}
+
+.period-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.period-options li {
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.period-options li:hover {
+  background-color: #f8f9fa;
+}
+
+.search-filter {
+  flex-grow: 1;
+  max-width: 350px;
+}
+
+.search-filter .input-group {
+  width: 100%;
+}
+
+.search-filter .input-group.search {
+  padding-top: 10px;
+  width: 275px;
+}
+
+.export-filter .filter-button {
+  background-color: #fff;
+}
+
+.input-group.search .input-group-btn:last-child > .btn {
+  position: absolute;
+  top: 11px;
+  height: 30px !important;
+  margin-left: 0;
+  z-index: 2;
+}
+
+div.search {
+  margin-left: 7px;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-filter {
+    max-width: 100%;
+    order: -1; /* Put search at top on mobile */
+  }
+}

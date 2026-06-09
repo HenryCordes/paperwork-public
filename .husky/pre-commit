@@ -1,0 +1,18 @@
+# Format/lint staged files, then typecheck only the area(s) actually touched.
+set -e
+
+npx lint-staged
+
+staged="$(git diff --cached --name-only --diff-filter=ACM)"
+
+# Client typecheck if any staged path is under client/
+if printf '%s\n' "$staged" | grep -q '^client/'; then
+  echo "husky/pre-commit: client change -> tsc (client)"
+  (cd client && npx tsc --noEmit -p tsconfig.json)
+fi
+
+# Server typecheck if any staged path is OUTSIDE client/ (ignoring blank lines)
+if printf '%s\n' "$staged" | grep -q -v -e '^client/' -e '^$'; then
+  echo "husky/pre-commit: server change -> tsc (server)"
+  npm run typecheck
+fi

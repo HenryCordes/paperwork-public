@@ -1,0 +1,14 @@
+input[type='radio'],
+input[type='checkbox'].form-check-input {
+  top: -10px;
+}
+
+.form-check-label.checkbox {
+  margin-left: 10px !important;
+  padding-bottom: 4px;
+}
+
+.export-button {
+  top: 15px;
+  position: relative;
+}

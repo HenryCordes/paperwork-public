@@ -1,0 +1,113 @@
+.pdf {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+@media print {
+  .pdf {
+    display: block;
+    border: 0px;
+    padding: 10px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 11px;
+  }
+  .box-body {
+    padding: 0;
+  }
+  .col-sm-3 {
+    width: 25%;
+    float: left;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 10px;
+  }
+  .col-sm-8 {
+    width: 66.66666667%;
+    float: left;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 10px;
+  }
+  .table-header {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 10px;
+  }
+  .table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 10px;
+  }
+  .onelinertable {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 10px;
+  }
+  .table > tbody > tr > td {
+    padding-bottom: 6px;
+    padding-right: 10px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 10px;
+  }
+  .footer-text {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 10px;
+  }
+  .table.report > tbody > tr > td {
+    border-top: 0;
+  }
+  .table.report > tbody > tr > th {
+    text-align: left;
+    border-top: 0;
+    border-bottom: 1px solid #ddd;
+  }
+  .table.report > tbody > tr.top-line > td {
+    border-top: 1px solid #ddd;
+  }
+  .pad-45 {
+    padding: 25px;
+  }
+  .table.footer-table,
+  .table.footer-table td {
+    border-collapse: separate;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 9px;
+  }
+  .table.footer-table {
+    border-spacing: 3px;
+  }
+  .table.footer-table > tbody > tr > td {
+    padding-left: 7px;
+    border: solid 1px #ddd;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 9px;
+  }
+
+  .box-footer {
+    display: none;
+  }
+  hr {
+    display: none;
+  }
+
+  .box.box-primary,
+  body.light .box.box-primary,
+  body.dark .box.box-primary {
+    border-top-color: transparent !important;
+  }
+  #pageHeader,
+  #pageHeader.title,
+  .title {
+    display: none;
+  }
+  h2.icon-calculator.short {
+    display: none;
+  }
+  .main-footer {
+    display: none;
+  }
+}

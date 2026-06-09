@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": ["ES2022"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "paths": {
+      "@shared/*": ["./shared/*"]
+    }
+  },
+  "include": [
+    "server.ts",
+    "worker.ts",
+    "common/**/*",
+    "shared/**/*",
+    "types/**/*",
+    "__tests__/**/*.ts"
+  ],
+  "exclude": ["node_modules", "client", "coverage", "scripts", "dist"]
+}

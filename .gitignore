@@ -1,0 +1,172 @@
+# ------------------------------------------------------------------------------
+# Common Node files and folders
+#  https://github.com/github/gitignore/blob/master/Node.gitignore
+# ------------------------------------------------------------------------------
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+*.crt
+*.csr
+*.key
+*.pem
+*.srl
+
+pids
+logs
+results
+
+# ignore everything in tmp/uploads folder, except for do-not-delete.txt
+tmp/uploads/*
+!tmp/uploads/do-not-delete.txt
+
+# ignore everything in tmp/temp folder, except for do-not-delete.txt
+tmp/temp/*
+!tmp/temp/do-not-delete.txt
+
+# ignore everything in tmp/pdf folder, except for factuur_1000.pdf
+tmp/pdf/*
+!tmp/pdf/factuur_1000.pdf
+
+
+node_modules
+npm-debug.log
+
+dump/
+
+# ------------------------------------------------------------------------------
+# dotEnv
+# ------------------------------------------------------------------------------
+/*.env
+*/config.env
+*/.env
+
+# ------------------------------------------------------------------------------
+# Yarn
+# ------------------------------------------------------------------------------
+
+package-lock.json
+
+# ------------------------------------------------------------------------------
+# Nodemon
+# ------------------------------------------------------------------------------
+
+.monitor
+
+
+# ------------------------------------------------------------------------------
+# JSHint
+# ------------------------------------------------------------------------------
+
+jshint
+
+
+# ------------------------------------------------------------------------------
+# Numerous always-ignore extensions
+# ------------------------------------------------------------------------------
+
+*.diff
+*.err
+*.orig
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+
+# ------------------------------------------------------------------------------
+# Files from other repository control systems
+# ------------------------------------------------------------------------------
+
+.hg
+.svn
+.CVS
+
+
+# ------------------------------------------------------------------------------
+# Your ideas
+# ------------------------------------------------------------------------------
+
+.idea
+
+
+# ------------------------------------------------------------------------------
+# OS X and other IDE's folder attributes
+# ------------------------------------------------------------------------------
+
+.DS_Store
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+
+
+
+# ------------------------------------------------------------------------------
+# VS Code
+# ------------------------------------------------------------------------------
+
+.vscode/launch.json
+
+# ------------------------------------------------------------------------------
+# Add your custom excludes below
+# ------------------------------------------------------------------------------
+react-new/
+coverage/
+
+# NVM
+.nvmrc
+
+
+# test-ui
+app/app/test/ui/_support/server-url.js
+retval
+.eslintrc
+quality/
+
+Vagrantfile
+*.vagrant
+
+\.vscode/
+
+# Google token generation
+app/app/lib/google-token-generation/client_secret.json
+app/app/lib/google-token-generation/client_token.json
+
+#test-jest
+app/jest_*
+
+# Client Build folder
+# client/build/*
+# !client/build/index.html
+# !client/build/favicon.ico
+# !client/build/robots.txt
+# !client/build/asset-manifest.json
+# !client/build/static/
+# !client/build/static/**/*
+# !client/build/pdf.worker.js
+
+# Temporarily keeping the entire build folder in version control for Heroku
+client/build/
+
+# Client documentation
+client/docs/
+
+.windsurf.json
+
+# Belastingdienst (Dutch tax authority) reference material — kept local only
+docs/Belastingdienst/
+

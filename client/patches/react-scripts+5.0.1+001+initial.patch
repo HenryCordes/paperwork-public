@@ -1,0 +1,16 @@
+diff --git a/node_modules/react-scripts/config/webpack.config.js b/node_modules/react-scripts/config/webpack.config.js
+index e465d8e..204849d 100644
+--- a/node_modules/react-scripts/config/webpack.config.js
++++ b/node_modules/react-scripts/config/webpack.config.js
+@@ -95,6 +95,11 @@ const hasJsxRuntime = (() => {
+   }
+ })();
+ 
++// Add patch for OpenSSL 3 compatibility (Node.js 20+)
++const crypto = require("crypto");
++const crypto_orig_createHash = crypto.createHash;
++crypto.createHash = algorithm => crypto_orig_createHash(algorithm == "md4" ? "sha256" : algorithm);
++
+ // This is the production and development configuration.
+ // It is focused on developer experience, fast rebuilds, and a minimal bundle.
+ module.exports = function (webpackEnv) {
