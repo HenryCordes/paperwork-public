@@ -1,0 +1,35 @@
+# Run the test suite(s) for whatever changed in the range being pushed.
+set -e
+
+# Determine a baseline to diff against.
+if base="$(git rev-parse --abbrev-ref --symbolic-full-name '@{u}' 2>/dev/null)"; then
+  changed="$(git diff --name-only "$base"..HEAD)"
+elif git rev-parse --verify origin/main >/dev/null 2>&1; then
+  changed="$(git diff --name-only origin/main..HEAD)"
+else
+  changed=""   # no baseline (new branch, no origin/main) -> run everything
+fi
+
+run_server=0
+run_client=0
+if [ -z "$changed" ]; then
+  run_server=1
+  run_client=1
+else
+  if printf '%s\n' "$changed" | grep -q '^client/'; then
+    run_client=1
+  fi
+  if printf '%s\n' "$changed" | grep -q -v -e '^client/' -e '^$'; then
+    run_server=1
+  fi
+fi
+
+if [ "$run_server" = 1 ]; then
+  echo "husky/pre-push: server change -> npm test"
+  npm test
+fi
+
+if [ "$run_client" = 1 ]; then
+  echo "husky/pre-push: client change -> client tests"
+  (cd client && CI=true npx craco test --watchAll=false --passWithNoTests)
+fi

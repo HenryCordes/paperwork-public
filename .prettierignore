@@ -1,0 +1,12 @@
+node_modules/
+client/node_modules/
+coverage/
+client/build/
+dist/
+package-lock.json
+client/package-lock.json
+repomix-output.xml
+docs/Belastingdienst/
+client/public/pdf.worker.js
+*.min.js
+**/*.md

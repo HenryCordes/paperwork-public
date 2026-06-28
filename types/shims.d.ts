@@ -1,0 +1,8 @@
+declare module 'mongoose-sequence'
+declare module 'cls-hooked'
+declare module 'archiver'
+declare module 'cors'
+declare module 'helmet'
+declare module 'hpp'
+declare module 'xss-clean'
+declare module 'robots.txt'

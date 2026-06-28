@@ -1,0 +1,171 @@
+.belasting-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.belasting {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.belasting-header {
+  margin-bottom: 2rem;
+}
+
+.belasting-header h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.belasting-subtitle {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.belasting-tabs {
+  display: flex;
+  border-bottom: 2px solid #e9ecef;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6c757d;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab-button:hover:not(:disabled) {
+  color: #495057;
+  background-color: #f8f9fa;
+}
+
+.tab-button.active {
+  color: #007bff;
+  border-bottom-color: #007bff;
+  background-color: #fff;
+}
+
+.tab-button:disabled {
+  color: #adb5bd;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.tab-button:disabled:hover {
+  background-color: transparent;
+}
+
+.belasting-content {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tab-content {
+  padding: 2rem;
+}
+
+.tab-header {
+  margin-bottom: 2rem;
+}
+
+.tab-header h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.tab-header p {
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.coming-soon {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #6c757d;
+}
+
+.coming-soon-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.coming-soon h3 {
+  color: #495057;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.coming-soon p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.loading-spinner {
+  font-size: 1.2rem;
+  color: #007bff;
+  padding: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .belasting {
+    padding: 1rem;
+  }
+
+  .belasting-header h1 {
+    font-size: 2rem;
+  }
+
+  .belasting-tabs {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .tab-button {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 0;
+  }
+
+  .tab-button.active {
+    border-bottom-color: #007bff;
+    border-left: 3px solid #007bff;
+  }
+
+  .tab-content {
+    padding: 1.5rem;
+  }
+
+  .tab-header h2 {
+    font-size: 1.5rem;
+  }
+}
