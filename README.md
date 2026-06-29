@@ -153,7 +153,7 @@ npm run eval:invoice-extraction -- --tenant-id <id>
 npm run eval:invoice-extraction -- --tenant-id <id> --limit 50
 ```
 
-Full design: `specs/2026-06-27-llm-invoice-extraction/design.md`.
+Full design: [`specs/2026-06-27-llm-invoice-extraction/design.md`](https://github.com/HenryCordes/paperwork-public/blob/main/specs/2026-06-27-llm-invoice-extraction/design.md#llm-based-invoicereceipt-extraction--design).
 
 ## Testing
 
