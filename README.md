@@ -102,7 +102,7 @@ LLM_INVOICE_EXTRACTION_ENABLED=false
 
 ### LLM invoice extraction
 
-`POST /api/invoices/scan` extracts structured invoice/receipt fields (vendor,
+[`POST /api/invoices/scan`](https://github.com/HenryCordes/paperwork-public/blob/b2ccd88ffd6d928dd6ec7547af2af5c1388f80c3/controllers/invoiceExtraction.ts#L32) extracts structured invoice/receipt fields (vendor,
 date, currency, subtotal, VAT breakdown, total, line items) from an uploaded
 image using a multimodal LLM, cross-checked by a lightweight arithmetic/domain
 validation layer (line items vs subtotal, subtotal + VAT vs total, VAT rate
